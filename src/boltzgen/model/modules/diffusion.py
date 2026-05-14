@@ -327,7 +327,7 @@ class AtomDiffusion(Module):
         self.time_dilation = time_dilation
         self.time_dilation_start = time_dilation_start
         self.time_dilation_end = time_dilation_end
-        self.gamma_0 = gamma_0
+        self.gamma_0 = 0.0  # force gamma_0=0 everywhere (deterministic sampler, no churn)
         self.gamma_min = gamma_min
         self.noise_scale = noise_scale
         self.noise_scale_function = noise_scale_function
